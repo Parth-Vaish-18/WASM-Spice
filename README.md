@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# WASM-Spice: Real-Time MNA Circuit Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, browser-based analog circuit simulator. This project combines a highly optimized C++ mathematical engine with a modern React frontend, compiled together using WebAssembly (WASM). 
 
-Currently, two official plugins are available:
+It performs real-time **Modified Nodal Analysis (MNA)** to solve complex circuits directly in the browser with zero backend server lag.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+* **Real-Time Physics Engine:** Solves MNA matrices at 500+ iterations per second using a custom C++ solver.
+* **Interactive Canvas:** Drag-and-drop React Flow interface for wiring components.
+* **Dynamic Oscilloscope:** Live-updating voltage trace graphs with automatic scaling and Net labeling.
+* **Dependent Sources:** Full mathematical support for Voltage-Controlled Voltage Sources (VCVS) and Voltage-Controlled Current Sources (VCCS).
+* **Robust Error Handling:** Safely intercepts and explains singular matrix errors (e.g., floating grounds or short circuits).
+* **Save/Load:** Import and export your schematics as `.json` files.
 
-## React Compiler
+## 🛠️ Tech Stack
+* **Frontend:** React, TypeScript, React Flow
+* **Math Engine:** C++17
+* **Bridge:** WebAssembly (WASM), Emscripten
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 How to Run Locally
+If you want to run this simulator on your own machine:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Parth-Vaish-18/wasm-spice.git
