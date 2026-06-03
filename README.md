@@ -24,9 +24,11 @@ If you want to run this simulator on your own machine:
    ```bash
    git clone https://github.com/Parth-Vaish-18/wasm-spice.git
 2. Navigate to the project folder and install dependencies:
+   ```bash
    cd wasm-spice
    npm install
 3. Start the local development server:
+   ```bash
    npm run dev
 4. Open http://localhost:5173 in your browser.
 (Note: You do not need to install C++ or Emscripten to run the app, as the pre-compiled solver.js and .wasm files are already included in the public folder).
