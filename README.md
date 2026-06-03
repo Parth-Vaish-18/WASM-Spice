@@ -18,7 +18,7 @@ It performs real-time **Modified Nodal Analysis (MNA)** to solve complex circuit
 * **Bridge:** WebAssembly (WASM), Emscripten
 
 ## 🚀 How to Run Locally
-If you want to run this simulator on your own machine:
+If you want to run this simulator on your own machine, open your terminal (or the VS Code terminal) and run the following commands:
 
 1. Clone this repository:
    ```bash
