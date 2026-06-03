@@ -22,4 +22,4 @@ If you want to run this simulator on your own machine:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Parth-Vaish-18/wasm-spice.git
+   https://github.com/Parth-Vaish-18/wasm-spice.git
