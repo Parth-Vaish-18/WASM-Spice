@@ -48,7 +48,7 @@ Simulating circuits dynamically means users will inevitably build invalid schema
 
 ---
 
-## 🛠️ Tech Stack & Structure
+## 🛠️ Tech Stack
 
 * **Frontend:** React, TypeScript, React Flow, Vite
 * **Math Engine:** Modern C++17 (Matrix Algebra, Numerical Methods)
